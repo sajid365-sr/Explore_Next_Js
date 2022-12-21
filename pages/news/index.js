@@ -1,9 +1,9 @@
+import styles from '../../styles/News.module.css';
 
-import React from 'react';
 
 const News = () => {
     return (
-        <div>
+        <div className= {styles.box}>
             <h1>This is news page</h1>
         </div>
     );
