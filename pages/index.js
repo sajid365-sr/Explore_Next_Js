@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Banner from "../Components/Banner/Banner";
 import Footer from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/Navbar";
 
 export default function Home({ posts }) {
   return (
     <div>
+      <Navbar />
       <Banner />
       <h1 className="text-3xl font-semibold text-center my-10">
         This is home page
@@ -36,15 +38,15 @@ export default function Home({ posts }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_limit=3"
-  );
-  const data = await res.json();
+// export const getStaticProps = async () => {
+//   const res = await fetch(
+//     "https://jsonplaceholder.typicode.com/posts?_limit=3"
+//   );
+//   const data = await res.json();
 
-  return {
-    props: {
-      posts: data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       posts: data,
+//     },
+//   };
+// };
